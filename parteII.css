@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --primary: #4F4F4F;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 10;
+}
+
+h2 {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #D3D3D3;
+    font-size: 50px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.24);
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+
+.logo {
+    font-size: 40px;
+    color: #ffff;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+.nav {
+    display: flex;
+}
+
+.nav li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transform: 0.5s;
+}
+
+.nav li:hover a {
+    color: var(--primary);
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: transparent;
+}
+
+.pesquisa input[type="search"] {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(GREYS\ II.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.7s;
+}
+
+.banner::before {
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    position: relative;
+    max-width: 600px;
+    display: none;
+    visibility: hidden;
+   transform: scale(0);
+   transition: 0.7s;
+}
+
+.content.active {
+    display: block;
+    visibility: visible;
+    font-size: 13px;
+    transform: scale(1);
+    transition: 0.7s;
+
+}
+
+.movile-title {
+    max-width: 250px;
+} 
+
+
+.banner .content h4 {
+    color: rgba(255, 255 , 255, 0.5);
+    font-weight: 400;
+    font-size: 30px;
+}
+
+
+.banner .content h4 span {
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255 , 255, 0.5);
+}
+
+
+.banner .content h4 span:first-child {
+   padding-left: 0; 
+}
+
+
+
+.banner .content h4 span:last-child  {
+    border-right: none;
+}
+
+
+.banner .content h4 span i {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 0 8px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.banner .content p {
+    font: 1em;
+    font-size: 100;
+    line-height: 1.4rem;
+    color: #ffffff;
+    margin: 10px 0 20px;
+}
+
+.banner .content .button {
+    position: relative;
+}
+
+.banner .content .button a {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.banner .content .button a:nth-child(2) {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255 , 255, 0.3);
+}
+
+.banner .content .button a:hover:nth-child(2) {
+    background: var(--primary);
+}
+
+.sci {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sci li  a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 45px;
+    background: #0000005d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#C0C0C0;
+    transition: 0.7s ease-in-out;
+}
+
+.sci li a:hover {
+    background:#696969;
+    transform: translateY(-10px);
+}
+
+
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+    padding: 5px;
+    margin: 5px;
+    transition: 0.3s;
+    transform: scale(1);
+}
